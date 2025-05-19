@@ -8,8 +8,6 @@ class Kernel extends HttpKernel
 {
     protected $middleware = [
         // middleware global (jalan di semua request)
-        'IsLoggedIn' => \App\Http\Middleware\IsLoggedIn::class,
-         
         \App\Http\Middleware\TrustProxies::class,
         \Fruitcake\Cors\HandleCors::class,
         \App\Http\Middleware\PreventRequestsDuringMaintenance::class,

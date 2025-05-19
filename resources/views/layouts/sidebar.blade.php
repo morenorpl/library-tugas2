@@ -25,10 +25,13 @@
                     <i class="fas fa-cog mr-3"></i>
                     Settings
                 </a>
-                <a href="{{ route('login') }}" class="flex items-center px-4 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white mt-8">
-                    <i class="fas fa-sign-out-alt mr-3"></i>
-                    Logout
-                </a>
+                <form method="POST" action="{{ route('logout') }}" class="mt-8">
+                    @csrf
+                    <button type="submit" class="flex items-center px-4 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white w-full text-left">
+                        <i class="fas fa-sign-out-alt mr-3"></i>
+                        Logout
+                    </button>
+                </form>
             </nav>
         </div>
     </div>

@@ -14,7 +14,7 @@ Route::resource('books', BooksController::class)->middleware('isLoggedIn');
 Route::get('/', function () {
     $books = Books::all();
     return view('dashboard.index', compact('books'));
-})->middleware(\App\Http\Middleware\IsLoggedIn::class)->name('dashboard');
+})->middleware('isLoggedIn')->name('dashboard');
 
 // Login Routes
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login')->middleware('guest');
